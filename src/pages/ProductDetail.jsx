@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { products } from "../mock-data/products";
 
 function ProductDetail() {
-    const {productId} = useParams()
+    const params = useParams();
+    const productId = params.productId;
 
     const product = products.find((p) => p.id === productId);
     
